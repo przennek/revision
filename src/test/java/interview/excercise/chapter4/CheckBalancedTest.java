@@ -55,5 +55,24 @@ class CheckBalancedTest {
 
         // then
         assert !bst;
+
+        // when 4.8
+        FirstCommonAncestor fca = new FirstCommonAncestor();
+        BinaryTreeNode<Integer> a1 = fca.find(root, n42, n43);
+
+        // then
+        assert a1 == n3;
+
+        // when
+        BinaryTreeNode<Integer> a2 = fca.find(root, n9, n6);
+
+        // then
+        assert a2 == n41;
+
+        // when
+        BinaryTreeNode<Integer> a3 = fca.find(root, n9, n43);
+
+        // then
+        assert a3 == root;
     }
 }
